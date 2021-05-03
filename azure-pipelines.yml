@@ -11,10 +11,10 @@ pool:
 
 steps:
 - task: AzureResourceGroupDeployment@2
-      displayName: 'Azure Deployment:Create Or Update Resource Group action on OC-DC'
-      inputs:
-        azureSubscription: Free Trial
-        resourceGroupName: 'rg2'
-        location: 'Central US'
-        csmFile: 'azuredeploy.json'
-        csmParametersFile: 'azuredeploy.parameters.json'
+  displayName: 'Azure Deployment:Create Or Update Resource Group action on OC-DC'
+  inputs:
+    azureSubscription: Free Trial
+    resourceGroupName: 'rg2'
+    location: 'Central US'
+    csmFile: 'azuredeploy.json'
+    csmParametersFile: 'azuredeploy.parameters.json'
