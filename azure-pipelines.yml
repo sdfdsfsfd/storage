@@ -13,8 +13,8 @@ steps:
 - task: AzureResourceGroupDeployment@2
       displayName: 'Azure Deployment:Create Or Update Resource Group action on OC-DC'
       inputs:
-        azureSubscription: MPN
-        resourceGroupName: 'VirtualNetwork_01'
-        location: 'West Europe'
-        csmFile: 'Deploymentfiles/VirtualNetwork/AzureDeploy.json'
-        csmParametersFile: 'Deploymentfiles/VirtualNetwork/AzureDeploy.parameters.json'
+        azureSubscription: Free Trial
+        resourceGroupName: 'rg2'
+        location: 'Central US'
+        csmFile: 'AzureDeploy.json'
+        csmParametersFile: 'AzureDeploy.parameters.json'
