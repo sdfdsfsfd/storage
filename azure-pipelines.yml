@@ -16,5 +16,5 @@ steps:
         azureSubscription: Free Trial
         resourceGroupName: 'rg2'
         location: 'Central US'
-        csmFile: 'AzureDeploy.json'
-        csmParametersFile: 'AzureDeploy.parameters.json'
+        csmFile: 'azuredeploy.json'
+        csmParametersFile: 'azuredeploy.parameters.json'
