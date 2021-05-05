@@ -10,11 +10,15 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: AzureResourceGroupDeployment@2
-  displayName: 'Azure Deployment:Create Or Update Resource Group action on OC-DC'
+- task: AzureResourceManagerTemplateDeployment@3
   inputs:
-    azureSubscription: Pay-As-You-Go
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Pay-As-You-Go(b5e3024f-bc2c-4de4-8db0-bd025a10d518)'
+    subscriptionId: 'b5e3024f-bc2c-4de4-8db0-bd025a10d518'
+    action: 'Create Or Update Resource Group'
     resourceGroupName: 'rg2'
     location: 'East US'
+    templateLocation: 'Linked artifact'
     csmFile: 'azuredeploy.json'
     csmParametersFile: 'azuredeploy.parameters.json'
+    deploymentMode: 'Incremental'
