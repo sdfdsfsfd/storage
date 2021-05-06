@@ -22,12 +22,3 @@ steps:
     csmFile: 'azuredeploy.json'
     csmParametersFile: 'azuredeploy.parameters.json'
     deploymentMode: 'Incremental'
-
-- task: AzureCLI@2
-  inputs:
-    azureSubscription: 'Pay-As-You-Go(b5e3024f-bc2c-4de4-8db0-bd025a10d518)'
-    scriptType: 'bash'
-    scriptLocation: 'inlineScript'
-    inlineScript: |
-      az account set --subscription b5e3024f-bc2c-4de4-8db0-bd025a10d518
-      az storage blob service-properties update --account-name testccount321 --static-website --404-document 404.html --index-document index.html
