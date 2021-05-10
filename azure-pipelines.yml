@@ -32,3 +32,4 @@ steps:
       az storage blob service-properties update --account-name testccount321 --static-website --404-document 404.html --index-document index.html
       ls
       pwd
+      wget https://minio.us-west.cloud.talend.com/tmc-dts-downloads/downloads/CI/Talend_Full_Studio_p2_repository-20200219_1130-V7.3.1.zip?response-content-disposition=attachment%3B%20filename%3D%22Talend_Full_Studio_p2_repository-20200219_1130-V7.3.1.zip%22&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20210510T074421Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1800&X-Amz-Credential=tmc%2F20210510%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=b2e0cdc6b51ea6a82e7dea04c29a07bb5533e45e8274a86c642952faba4e0012
