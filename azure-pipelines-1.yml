@@ -2,9 +2,9 @@
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
-parameters:
-- name: storage_account_name # name of the parameter; required
-  type: string # data type of the parameter; required
+#parameters:
+#- name: storage_account_name # name of the parameter; required
+  #type: string # data type of the parameter; required
   
   
 trigger: none
