@@ -8,13 +8,13 @@ trigger: none
 pool:
   vmImage: ubuntu-latest
 
-#variables:
-#- template: paramaters.yml
+variables:
+- template: paramaters.yml
 
 steps:
 
-#- script: echo ${{ parameters.storage_account_name }}
-#  displayName: 'Run a one-line script'
+- script: echo ${{ parameters.storage_account_name }}
+  displayName: 'Run a one-line script'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
