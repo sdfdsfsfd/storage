@@ -12,7 +12,7 @@ pool:
 #- template: paramaters.yml
 
 steps:
-- template: paramaters.yml
+- template: ./paramaters.yml
 - script: echo ${{ parameters.storage_account_name }}
   displayName: 'Run a one-line script'
 
