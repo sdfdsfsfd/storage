@@ -5,15 +5,15 @@
 parameters:
 - name: storage_account_name # name of the parameter; required
   type: string # data type of the parameter; required
-  default: mohasin
+  
   
 trigger: none
 
 pool:
   vmImage: ubuntu-latest
 
-#variables:
-#- template: parameters.yml
+variables:
+- template: parameters.yml
 
 steps:
 - script: echo ${{ parameters.storage_account_name }}
