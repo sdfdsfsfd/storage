@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-- template: paramaters.yml
+- template: /paramaters.yml
 
 steps:
 
