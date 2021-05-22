@@ -16,7 +16,7 @@ variables:
 - template: params.yml
 
 steps:
-- script: echo ${{ parameters.yesno }}
+- script: echo ${{ parameters.yesNo }}
   displayName: 'Run a one-line script'
 
 - script: |
