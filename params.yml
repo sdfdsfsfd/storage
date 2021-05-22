@@ -1,0 +1,6 @@
+parameters:
+- name: yesNo # name of the parameter; required
+  type: string # data type of the parameter; required
+  default: moshins
+
+ 
