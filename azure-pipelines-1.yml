@@ -13,10 +13,10 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-- template: parameters.yml
+- template: params.yml
 
 steps:
-- script: echo ${{ variables.storage_account_name }}
+- script: echo ${{ parameters.yesno }}
   displayName: 'Run a one-line script'
 
 - script: |
