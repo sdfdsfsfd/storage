@@ -27,7 +27,7 @@ steps:
           <server>
             <id>moh</id>
             <username>mohasinpathan005</username>
-            <password>[PERSONAL_ACCESS_TOKEN]</password>
+            <password>$(test)</password>
           </server>
         </servers>
         </settings>
