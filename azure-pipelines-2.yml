@@ -16,7 +16,7 @@ steps:
     targetType: 'inline'
     script: |
       # Write your commands here
-      
+      echo $(test)
       echo Hello, world!
       cat >settings.xml <<EOF
         <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
