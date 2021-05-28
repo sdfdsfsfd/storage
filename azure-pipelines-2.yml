@@ -33,3 +33,4 @@ steps:
         </settings>
       EOF
       ls
+      cat settings.xml
