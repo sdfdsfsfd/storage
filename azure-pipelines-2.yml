@@ -1,0 +1,29 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- none
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: |
+    echo Hello, world!
+    cat >settings.xml <<EOF
+  <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                              https://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <servers>
+    <server>
+      <id>moh</id>
+      <username>mohasinpathan005</username>
+      <password>[PERSONAL_ACCESS_TOKEN]</password>
+    </server>
+  </servers>
+  </settings>
+ EOF
+   ls
