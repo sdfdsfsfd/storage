@@ -16,7 +16,7 @@ variables:
 - template: parameters.yml
 
 steps:
-- script: echo $${{ variables.storage_account_name }}
+- script: echo $(${{ variables.storage_account_name }})
   displayName: 'Run a one-line script'
 
 #- script: |
