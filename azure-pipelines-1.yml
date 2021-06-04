@@ -13,14 +13,14 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-- template: params.yml
+- template: parameters.yml
 
 steps:
-- script: echo ${{ parameters.yesNo }}
+- script: echo $${{ variables.storage_account_name }}
   displayName: 'Run a one-line script'
 
-- script: |
-    ls
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+#- script: |
+ #   ls
+ #   echo Add other tasks to build, test, and deploy your project.
+ #   echo See https://aka.ms/yaml
+ # displayName: 'Run a multi-line script'
