@@ -1,2 +1,2 @@
 variables:
-  storage_account_name: 'brussels sprouts'
+  storage_account_name: 'brussels sprouts'   #for testing purpose
