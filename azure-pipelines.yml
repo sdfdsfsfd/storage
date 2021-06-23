@@ -3,7 +3,10 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 pr: master
-trigger: master
+trigger: 
+- master
+- dev
+- release
 
 pool:
   vmImage: ubuntu-latest
