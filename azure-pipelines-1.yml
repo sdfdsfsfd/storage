@@ -7,7 +7,8 @@
   #type: string # data type of the parameter; required
   
   
-trigger: 
+trigger:
+- master 
 - release
 - dev
 
