@@ -24,7 +24,7 @@ steps:
   inputs:
     sshEndpoint: mohas
     runOptions: 'commands'
-    commands: pwd; hostname
+    commands: pwd; hostname; mkdir /home/azureuser/mohaa /home/azureuser/mohaa1; cd /home/azureuser/mohaa; touch mohaafile; cp /home/azureuser/mohaa/* /home/azureuser/mohaa1 
     #scriptPath: # Required when runOptions == Script
     #inline: # Required when runOptions == Inline
     #interpreterCommand: # Used when runOptions == Inline
