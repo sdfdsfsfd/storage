@@ -17,3 +17,16 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+# SSH
+# Run shell commands or a script on a remote machine using SSH
+- task: SSH@0
+  inputs:
+    sshEndpoint: mohas
+    runOptions: 'commands'
+    commands: pwd
+    #scriptPath: # Required when runOptions == Script
+    #inline: # Required when runOptions == Inline
+    #interpreterCommand: # Used when runOptions == Inline
+    #args: # Optional
+    #failOnStdErr: true # Optional 
