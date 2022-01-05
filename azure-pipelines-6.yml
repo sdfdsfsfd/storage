@@ -16,5 +16,5 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
-    azcopy copy 'https://steraadf.blob.core.windows.net/?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-01-05T19:07:15Z&st=2022-01-05T11:07:15Z&spr=https&sig=I0hINoM92N1pMhFmBcgn%2B7dLWF0VraAUCcAyfbPM23I%3D' 'https://testting1324.blob.core.windows.net/' --recursive
+    azcopy copy 'https://steraadf.blob.core.windows.net/?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-01-05T19:07:15Z&st=2022-01-05T11:07:15Z&spr=https&sig=I0hINoM92N1pMhFmBcgn%2B7dLWF0VraAUCcAyfbPM23I%3D' 'https://testting1324.blob.core.windows.net/?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-01-05T19:15:47Z&st=2022-01-05T11:15:47Z&spr=https&sig=wPAQ%2F8SArnBJgZnjX4KMo%2FPUZ3Ptu43KcpOMhr4PP3o%3D' --recursive
   displayName: 'Run a multi-line script'
