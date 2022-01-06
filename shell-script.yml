@@ -13,5 +13,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo $(storage_account_name)
+
+- ${{ each value in $(storage_account_name) }}:
+  - script: echo ${{ value }}
+
+- script: 
+     echo $(storage_account_name)
   displayName: 'Run a one-line script'
