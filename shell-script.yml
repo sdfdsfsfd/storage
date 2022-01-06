@@ -19,6 +19,7 @@ steps:
 - script: 
      touch file.txt
      echo $(storage_account_name) >> file.txt
+     ls -l
      cat file.txt
 
      #cut -d "delimiter" -f (field number) file.txt
