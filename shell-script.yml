@@ -14,7 +14,7 @@ pool:
 
 steps:
 
-- ${{ each value in $(storage_account_name) }}:
+- ${{ each value in ${{ variables.storage_account_name }} }}:
   - script: echo ${{ value }}
 
 - script: 
