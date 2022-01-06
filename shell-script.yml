@@ -19,7 +19,17 @@ steps:
     runOptions: 'inline'
     inline: |
       touch file.txt
-      echo $(storage_account_name) | awk -F, '{ for (i = 1; i <= NF; ++i ) print $i }'
+      echo $(storage_account_name) | awk -F, '{ for (i = 1; i <= NF; ++i ) print $i }' >> file.txt
+      cat file.txt
+      FILENAME="file.txt"
+
+      LINES=$(cat $FILENAME)
+
+      for LINE in $LINES
+      do
+         echo "$LINE"
+      done
+      #echo $(storage_account_name) | awk -F, '{ for (i = 1; i <= NF; ++i ) print $i }'
                     #echo $(storage_account_name) >> file.txt
                     
                     #while IFS=, read -ra arr; do
