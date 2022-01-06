@@ -17,6 +17,7 @@ steps:
 
 
 - script: 
+     touch file.txt
      echo $(storage_account_name) >> file.txt
      cat file.txt
 
