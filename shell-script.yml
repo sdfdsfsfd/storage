@@ -13,7 +13,7 @@ steps:
     sshEndpoint: 'new'
     runOptions: 'inline'
     inline: |
-      if [ ! -f file12.txt]
+      if [ ! -f file12.txt ]
       then
         touch file12.txt
       else
