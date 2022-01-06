@@ -17,5 +17,8 @@ steps:
 
 
 - script: 
-     echo $(storage_account_name)
+     echo $(storage_account_name) >> file.txt
+     cat file.txt
+
+     #cut -d "delimiter" -f (field number) file.txt
   displayName: 'Run a one-line script'
