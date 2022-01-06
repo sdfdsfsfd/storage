@@ -13,10 +13,10 @@ steps:
     sshEndpoint: 'new'
     runOptions: 'inline'
     inline: |
-      touch file.txt
-      echo $(storage_account_name) | awk -F, '{ for (i = 1; i <= NF; ++i ) print $i }' >> file.txt
-      cat file.txt
-      FILENAME="file.txt"
+      touch file12.txt
+      echo $(storage_account_name) | awk -F, '{ for (i = 1; i <= NF; ++i ) print $i }' > file12.txt
+      #cat file.txt
+      FILENAME="file12.txt"
 
       LINES=$(cat $FILENAME)
 
