@@ -1,8 +1,3 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger:
 - none
 
@@ -19,16 +14,19 @@ steps:
     runOptions: 'inline'
     inline: |
       touch file.txt
-      echo $(storage_account_name) | awk -F, '{ for (i = 1; i <= NF; ++i )  }' >> file.txt
+      echo $(storage_account_name) | awk -F, '{ for (i = 1; i <= NF; ++i ) print $i }' >> file.txt
       cat file.txt
-      #FILENAME="file.txt"
+      FILENAME="file.txt"
 
-      #LINES=$(cat $FILENAME)
+      LINES=$(cat $FILENAME)
 
-      #for LINE in $LINES
-      #do
-         #echo "$LINE"
-      #done
+      for LINE in $LINES
+      do
+         cp -R $LINE /home/azureuser/hero/heroine
+      done
+
+
+
       #echo $(storage_account_name) | awk -F, '{ for (i = 1; i <= NF; ++i ) print $i }'
                     #echo $(storage_account_name) >> file.txt
                     
