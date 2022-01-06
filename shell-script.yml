@@ -14,13 +14,11 @@ pool:
 
 steps:
 
-
-
-- script: 
-     touch file.txt
-     echo $(storage_account_name) >> file.txt
-     ls -l
-     cat file.txt
-
-     #cut -d "delimiter" -f (field number) file.txt
+- task: CmdLine@2
   displayName: 'Run a one-line script'
+  inputs:
+    script: |
+      touch file.txt
+      echo $(storage_account_name) >> file.txt
+       ls -l
+       cat file.txt
