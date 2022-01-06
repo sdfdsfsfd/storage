@@ -19,11 +19,14 @@ steps:
     runOptions: 'inline'
     inline: |
       touch file.txt
-                   echo $(storage_account_name) >> file.txt
-                   
-                   while IFS=, read -ra arr; do
-                    echo ${arr[ ]}
-                   done < file.txt
+      echo $(storage_account_name) | awk -F, '{ for (i = 1; i <= NF; ++i ) print $i }'
+                    #echo $(storage_account_name) >> file.txt
+                    
+                    #while IFS=, read -ra arr; do
+                      ##echo ${arr[0]}
+                      #echo ${arr[1]}
+                      #echo ${arr[2]}
+                    #done < file.txt
     readyTimeout: '20000'
 
 - task: CmdLine@2
