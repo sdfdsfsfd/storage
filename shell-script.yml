@@ -19,7 +19,7 @@ steps:
     runOptions: 'inline'
     inline: |
       touch file.txt
-      echo $(storage_account_name) | awk -F, '{ for (i = 1; i <= NF; ++i ) print $i }' >> file.txt
+      echo $(storage_account_name) | awk -F, '{ for (i = 1; i <= NF; ++i )  }' >> file.txt
       cat file.txt
       #FILENAME="file.txt"
 
