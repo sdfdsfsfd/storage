@@ -22,3 +22,9 @@ steps:
       echo $(storage_account_name) >> file.txt
        ls -l
        cat file.txt
+       while IFS=, read -ra arr; do
+           echo ${arr0]}
+           echo ${arr[1]}
+           echo ${arr[2]}
+       done < file.txt
+       #cut -d "," -f (field number) file.txt
