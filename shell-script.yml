@@ -13,9 +13,15 @@ steps:
     sshEndpoint: 'new'
     runOptions: 'inline'
     inline: |
-      touch file12.txt
+      if [ ! -f file12.txt]
+      then
+        touch file12.txt
+      else
+        echo "File present. Proceeding!!"
+      fi
+
       echo $(storage_account_name) | awk -F, '{ for (i = 1; i <= NF; ++i ) print $i }' > file12.txt
-      #cat file.txt
+      
       FILENAME="file12.txt"
 
       LINES=$(cat $FILENAME)
