@@ -19,10 +19,11 @@ steps:
     sshEndpoint: 'new'
     runOptions: 'commands'
     commands: |
-      touch file.txt
+             touch file.txt
              echo $(storage_account_name) >> file.txt
              
-             while IFS=, read -ra arr; do
+             while IFS=, read -ra arr
+             do
                  echo ${arr[ ]}
                  
              done < file.txt
