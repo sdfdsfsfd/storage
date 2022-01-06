@@ -18,11 +18,13 @@ steps:
   inputs:
     sshEndpoint: 'new'
     runOptions: 'commands'
-    commands: |
+    script: |
              touch file.txt
              echo $(storage_account_name) >> file.txt
              
-             while IFS=,; read -ra arr; do; echo ${arr[0]}; done < file.txt
+             while IFS=, read -ra arr; do
+              echo ${arr[0]}
+             done < file.txt
     readyTimeout: '20000'
 - task: CmdLine@2
   displayName: 'Run a one-line script'
