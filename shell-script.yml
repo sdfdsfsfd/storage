@@ -5,12 +5,7 @@
 
 trigger:
 - none
-- task: SSH@0
-  inputs:
-    sshEndpoint: 'new'
-    runOptions: 'inline'
-    inline: 'dfdf'
-    readyTimeout: '20000'
+
 variables:
 - template: parameters.yml
 
