@@ -22,7 +22,7 @@ steps:
              touch file.txt
              echo $(storage_account_name) >> file.txt
              
-             while IFS=, read -ra arr
+             while [ IFS=, read -ra arr ]
              do
                  echo ${arr[ ]}
                  
