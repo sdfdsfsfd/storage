@@ -21,14 +21,14 @@ steps:
       touch file.txt
       echo $(storage_account_name) | awk -F, '{ for (i = 1; i <= NF; ++i ) print $i }' >> file.txt
       cat file.txt
-      FILENAME="file.txt"
+      #FILENAME="file.txt"
 
-      LINES=$(cat $FILENAME)
+      #LINES=$(cat $FILENAME)
 
-      for LINE in $LINES
-      do
-         echo "$LINE"
-      done
+      #for LINE in $LINES
+      #do
+         #echo "$LINE"
+      #done
       #echo $(storage_account_name) | awk -F, '{ for (i = 1; i <= NF; ++i ) print $i }'
                     #echo $(storage_account_name) >> file.txt
                     
@@ -39,16 +39,16 @@ steps:
                     #done < file.txt
     readyTimeout: '20000'
 
-- task: CmdLine@2
-  displayName: 'Run a one-line script'
-  inputs:
-    script: |
-       touch file.txt
-       echo $(storage_account_name) >> file.txt
-       
-       while IFS=, read -ra arr; do
-           echo ${arr[0]}
-           echo ${arr[1]}
-           echo ${arr[2]}
-       done < file.txt
+#- task: CmdLine@2
+ # displayName: 'Run a one-line script'
+  #inputs:
+   # script: |
+    #   touch file.txt
+     #  echo $(storage_account_name) >> file.txt
+      
+       #while IFS=, read -ra arr; do
+      #     echo ${arr[0]}
+       #    echo ${arr[1]}
+        #   echo ${arr[2]}
+       #done < file.txt
        #cut -d "," -f (field number) file.txt
