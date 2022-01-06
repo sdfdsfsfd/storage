@@ -1,2 +1,2 @@
 variables:
-   storage_account_name: s.txt
+   storage_account_name: 'a.txt,b.txt,c.txt'
