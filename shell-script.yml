@@ -18,7 +18,7 @@ steps:
   inputs:
     sshEndpoint: 'new'
     runOptions: 'commands'
-    commands: 'hostname'
+    commands: 'hostname';'pwd'
     readyTimeout: '20000'
 - task: CmdLine@2
   displayName: 'Run a one-line script'
