@@ -1,2 +1,4 @@
 variables:
-  storage_account_name: brussels.txt
+  storage_account_name:
+          - brussels.txt
+          - sprouts.txt
