@@ -1,2 +1,2 @@
 variables:
-   storage_account_name: '/home/azureuser/file.txt,/home/azureuser/file1.txt,/home/azureuser/file2.txt'
+   storage_account_name: '/home/azureuser/file.txt,/home/azureuser/file1.txt,/home/azureuser/file2.txt,/home/azureuser/file3.txt'
