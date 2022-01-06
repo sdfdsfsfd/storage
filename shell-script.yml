@@ -22,7 +22,7 @@ steps:
                    echo $(storage_account_name) >> file.txt
                    
                    while IFS=, read -ra arr; do
-                    echo ${arr[0]}
+                    echo ${arr[ ]}
                    done < file.txt
     readyTimeout: '20000'
 
