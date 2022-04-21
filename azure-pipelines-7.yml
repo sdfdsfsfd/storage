@@ -1,0 +1,27 @@
+# Starter pipeline
+
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'Pay-As-You-Go (40783f5c-2558-41a9-a5af-97b47669376e)'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      
+      
+      
+      az storage blob exists -c testcontainer -n sample.txt --account-name newstrac1 --sas-token ?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-04-29T15:11:33Z&st=2022-04-21T07:11:33Z&spr=https&sig=CTLTUh7JZKGBXrZzNPyg1IoTGPW0WGR4TdcPeGfPuto%3D
+
+
+
+##az storage blob exists -c testcontainer -n sample.txt --account-name newstrac1 --connection-string "DefaultEndpointsProtocol=https;AccountName=newstrac1;AccountKey=$$$$$;EndpointSuffix=core.windows.net"
