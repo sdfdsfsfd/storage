@@ -9,26 +9,22 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
+steps:
+- task: ManualValidation@0
+  inputs:
+    notifyUsers: 'mohasinpathan005@gmail.com'
+    instructions: 'Please approve'
 
-jobs:
-  - job: waitForValidation
-    displayName: Wait for external validation
-    
-    timeoutInMinutes: 4320 # job times out in 3 days
-    steps:
-    - task: ManualValidation@0
-      timeoutInMinutes: 1440 # task times out in 1 day
-      inputs:
-        notifyUsers: |
-          mohasinpathan005@gmail.com
-        instructions: 'Please validate the build configuration and resume'
-        onTimeout: 'resume'
-    - task: AzureCLI@2
-      inputs:
-        azureSubscription: 'Pay-As-You-Go (40783f5c-2558-41a9-a5af-97b47669376e)'
-        scriptType: 'bash'
-        scriptLocation: 'inlineScript'
-        inlineScript: |
+- task: ManualIntervention@8
+  inputs:
+    instructions: 'Please approve'
+    emailRecipients: 'mohasinpathan005@gmail.com'
+- task: AzureCLI@2
+  inputs:
+      azureSubscription: 'Pay-As-You-Go (40783f5c-2558-41a9-a5af-97b47669376e)'
+      scriptType: 'bash'
+      scriptLocation: 'inlineScript'
+      inlineScript: |
       
       
       
@@ -37,6 +33,4 @@ jobs:
 
 
 ##az storage blob exists -c testcontainer -n sample.txt --account-name newstrac1 --connection-string "DefaultEndpointsProtocol=https;AccountName=newstrac1;AccountKey=$$$$$;EndpointSuffix=core.windows.net"
-
-
 
