@@ -10,8 +10,6 @@ pool:
   vmImage: windows-latest
 
 steps:
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-    azcopy copy 'https://strac1.blob.core.windows.net/testcontainer/testfile.txt?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-06-09T14:55:33Z&st=2022-06-09T06:55:33Z&spr=https&sig=zlU3JIGUoqXyOUaD6Pz7OUGFfD568%2FVSLXpm7z9BznM%3D' 'https://strac2.blob.core.windows.net/testcontainer?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-06-09T14:54:08Z&st=2022-06-09T06:54:08Z&spr=https&sig=A7cdDddHz9%2FpornVSstKTCFcSjzibg8rBDRTcOYKlgc%3D' --recursive
-  displayName: 'Transfer Blob'
+- task: CmdLine@2
+  inputs:
+    script: 'azcopy copy ''https://strac1.blob.core.windows.net/testcontainer/testfile.txt?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-06-09T14:55:33Z&st=2022-06-09T06:55:33Z&spr=https&sig=zlU3JIGUoqXyOUaD6Pz7OUGFfD568%2FVSLXpm7z9BznM%3D'' ''https://strac2.blob.core.windows.net/testcontainer?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-06-09T14:54:08Z&st=2022-06-09T06:54:08Z&spr=https&sig=A7cdDddHz9%2FpornVSstKTCFcSjzibg8rBDRTcOYKlgc%3D'' --recursive'
