@@ -7,14 +7,11 @@ trigger:
 - none
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: windows-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
-    azcopy copy 'https://steraadf.blob.core.windows.net/?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-01-05T19:07:15Z&st=2022-01-05T11:07:15Z&spr=https&sig=I0hINoM92N1pMhFmBcgn%2B7dLWF0VraAUCcAyfbPM23I%3D' 'https://testting1324.blob.core.windows.net/?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-01-05T19:15:47Z&st=2022-01-05T11:15:47Z&spr=https&sig=wPAQ%2F8SArnBJgZnjX4KMo%2FPUZ3Ptu43KcpOMhr4PP3o%3D' --recursive
-  displayName: 'Run a multi-line script'
+    azcopy copy 'https://strac1.blob.core.windows.net/testcontainer/testfile.txt?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-06-09T14:55:33Z&st=2022-06-09T06:55:33Z&spr=https&sig=zlU3JIGUoqXyOUaD6Pz7OUGFfD568%2FVSLXpm7z9BznM%3D' 'https://strac2.blob.core.windows.net/testcontainer?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-06-09T14:54:08Z&st=2022-06-09T06:54:08Z&spr=https&sig=A7cdDddHz9%2FpornVSstKTCFcSjzibg8rBDRTcOYKlgc%3D' --recursive
+  displayName: 'Transfer Blob'
